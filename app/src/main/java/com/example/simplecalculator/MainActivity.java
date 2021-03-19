@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     Button button0, button1, button2, button3, button4, button5, button6,
             button7, button8, button9, buttonAdd, buttonSub, buttonDiv,
             buttonMul, buttonDecimal, buttonC, buttonEqual;
-    EditText display;
-    boolean add, sub, multiply, divide, deci;
+    TextView display;
+    boolean add, sub, multiply, divide;
     float mValueOne, mValueTwo;
 
     @Override
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         buttonC = (Button) findViewById(R.id.buttonC);
         buttonEqual = (Button) findViewById(R.id.buttonEqual);
 
-        display = (EditText) findViewById(R.id.display);
+        display = (TextView) findViewById(R.id.display);
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //TODO fixer ctd quand on rentre un signe sans avoir rentrer de chiffre
                 if (display == null) {
                     display.setText("");
                 } else {
