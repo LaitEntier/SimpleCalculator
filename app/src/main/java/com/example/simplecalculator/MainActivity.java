@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -115,10 +116,9 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //TODO fixer ctd quand on rentre un signe sans avoir rentrer de chiffre
-                if (display == null) {
+                if (display.getText().toString().equals("")) {
                     display.setText("");
+                    popUp("Entrez d'abord une valeur");
                 } else {
                     mValueOne = Float.parseFloat(display.getText() + "");
                     add = true;
@@ -130,53 +130,73 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(display.getText() + "");
-                sub = true;
-                display.setText(null);
+                if (display.getText().toString().equals("")) {
+                    display.setText("");
+                    popUp("Entrez d'abord une valeur");
+                } else {
+                    mValueOne = Float.parseFloat(display.getText() + "");
+                    sub = true;
+                    display.setText(null);
+                }
             }
         });
 
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(display.getText() + "");
-                multiply = true;
-                display.setText(null);
+                if (display.getText().toString().equals("")) {
+                    display.setText("");
+                    popUp("Entrez d'abord une valeur");
+                } else {
+                    mValueOne = Float.parseFloat(display.getText() + "");
+                    multiply = true;
+                    display.setText(null);
+                }
             }
         });
 
         buttonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(display.getText() + "");
-                divide = true;
-                display.setText(null);
+                if (display.getText().toString().equals("")) {
+                    display.setText("");
+                    popUp("Entrez d'abord une valeur");
+                } else {
+                    mValueOne = Float.parseFloat(display.getText() + "");
+                    divide = true;
+                    display.setText(null);
+                }
             }
         });
 
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueTwo = Float.parseFloat(display.getText() + "");
+                if (display.getText().toString().equals("")) {
+                    display.setText("");
+                    popUp("Entrez d'abord une valeur");
+                } else {
+                    mValueTwo = Float.parseFloat(display.getText() + "");
 
-                if (add == true) {
-                    display.setText(mValueOne + mValueTwo + "");
-                    add = false;
-                }
+                    if (add == true) {
+                        display.setText(mValueOne + mValueTwo + "");
+                        add = false;
+                    }
 
-                if (sub == true) {
-                    display.setText(mValueOne - mValueTwo + "");
-                    sub = false;
-                }
+                    if (sub == true) {
+                        display.setText(mValueOne - mValueTwo + "");
+                        sub = false;
+                    }
 
-                if (multiply == true) {
-                    display.setText(mValueOne * mValueTwo + "");
-                    multiply = false;
-                }
+                    if (multiply == true) {
+                        display.setText(mValueOne * mValueTwo + "");
+                        multiply = false;
+                    }
 
-                if (divide == true) {
-                    display.setText(mValueOne / mValueTwo + "");
-                    divide = false;
+                    if (divide == true) {
+                        display.setText(mValueOne / mValueTwo + "");
+                        divide = false;
+                    }
                 }
             }
         });
@@ -196,4 +216,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void popUp(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
 }

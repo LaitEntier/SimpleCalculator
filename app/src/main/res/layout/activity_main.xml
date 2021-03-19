@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#ecf0f1"
-            android:text="0.0"
+            android:text=""
             android:textColor="#494949"
             android:textSize="100sp" />
     </LinearLayout>
