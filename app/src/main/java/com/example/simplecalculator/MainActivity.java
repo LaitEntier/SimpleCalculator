@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "0");
             }
         });
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "1");
             }
         });
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "2");
             }
         });
@@ -67,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "3");
             }
         });
@@ -74,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "4");
             }
         });
@@ -81,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "5");
             }
         });
@@ -88,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "6");
             }
         });
@@ -95,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "7");
             }
         });
@@ -102,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "8");
             }
         });
@@ -109,7 +118,9 @@ public class MainActivity extends AppCompatActivity {
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                display.setText(null);
                 display.setText(display.getText() + "9");
+
             }
         });
 
